@@ -1,0 +1,41 @@
+@import "settings";
+@import "../vendor/sass/bootstrap";
+
+body {
+  padding-top: 2em;
+}
+
+.well-active {
+  background-color: $state-success-bg;
+  border-color: $state-success-border;
+  color: $state-success-text;
+}
+
+.well-full {
+  .well__filename {
+    &:before {
+      @extend .glyphicon;
+      @extend .glyphicon-ok;
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.js-data {
+  display: none;
+  max-height: 15em;
+  overflow: auto;
+  border: 1px solid $table-border-color;
+
+  table {
+    margin: 0;
+  }
+
+  thead {
+    background-color: #fff;
+  }
+
+  .tableFloatingHeaderOriginal {
+    margin-top: 1px !important;
+  }
+}
